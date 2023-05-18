@@ -1,0 +1,69 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block content %}
+<div style="margin-left: 20%; margin-top: 1%;">
+        <div class="">
+          <div class="card p-5 w-75 h-100">
+              <div class="card-body">
+                <h3 class="font-weight-bold" style="text-align: center;">Burpsuit</h3>
+                <img style="width: 35px;" src="{% static 'images/burpsuit.png' %}">
+                <p>      <h5 class="font-weight-bold">Indtroduction</h5>
+                        dans Cette section on couvrira les bases de l'utilisation du cadre d'application Web Burp Suite.<br>
+                        Plus précisément, nous examinerons :
+                                <ul style="margin-left: 5%;">
+                                  <li>Qu'est-ce que Burp Suite</li>
+                                  <li>Un aperçu des outils disponibles dans le framework</li>
+                                  <li>Installer Burp Suite pour vous-même</li>
+                                  <li>Naviguer et configurer Burp Suite.</li>
+                                </ul>
+                </p>
+                <p class="font-weight-bold"><h5 class="font-weight-bold">Méthodologie</h5></p>
+                <p>
+                        En termes simples : Burp Suite est un framework écrit en Java qui vise à fournir un guichet unique pour les tests
+                        de pénétration des applications Web. À bien des égards, cet objectif est atteint car Burp est l'outil standard de 
+                        l'industrie pour les évaluations pratiques de la sécurité des applications Web. Burp Suite est également très
+                         couramment utilisée lors de l'évaluation des applications mobiles, car les mêmes fonctionnalités qui la rendent si 
+                         attrayante pour les tests d'applications Web se traduisent presque parfaitement par le test des API
+                          (interfaces de programmation d'applications) qui alimentent la plupart des applications mobiles.
+                </p>
+                <p>
+                        Au niveau le plus simple, Burp peut capturer et manipuler tout le trafic entre un attaquant et un serveur Web : 
+                        c'est le cœur du framework. Après avoir capturé les demandes, nous pouvons choisir de les envoyer à diverses autres parties 
+                        du cadre Burp Suite - nous couvrirons certains de ces outils dans les salles à venir. Cette capacité à intercepter,
+                         afficher et modifier les requêtes Web avant qu'elles ne soient envoyées au serveur cible (ou, dans certains cas, 
+                         les réponses avant qu'elles ne soient reçues par notre navigateur), 
+                        rend Burp Suite parfait pour tout type de test manuel d'applications Web. .
+                </p>
+                <p>
+                        Il existe différentes éditions de Burp Suite disponibles. Nous travaillerons avec l'édition Burp Suite Community, 
+                        car elle est gratuite pour toute utilisation (légale) non commerciale. Les éditions Burp Suite Professional et Enterprise
+                        nécessitent toutes deux des licences coûteuses, mais sont dotées de fonctionnalités supplémentaires puissantes :
+                </p>
+                <p>
+                  <h6  class="font-weight-bold">Burp Suite Professional</h6>
+                  est une version sans restriction de Burp Suite Community. Il est livré avec des fonctionnalités telles que :
+                  <ul style="margin-left: 5%;">
+                    <li>Un scanner de vulnérabilité automatisé</li>
+                    <li>A fuzzer/bruteforcer that isn't rate limited</li>
+                    <li>Enregistrer des projets pour une utilisation future ; génération de rapports</li>
+                    <li>Une API intégrée pour permettre l'intégration avec d'autres outils</li>
+                    <li>Accès illimité pour ajouter de nouvelles extensions pour une plus grande fonctionnalité</li>
+                    <li>Accès au collaborateur Burp Suite (fournissant effectivement un attrape-requêtes unique auto-hébergé ou exécuté sur un serveur appartenant à Portswigger)</li>
+                  </ul>
+                </p>
+                <p>
+                  <h6  class="font-weight-bold">Burp Suite Enterprise</h6>
+                  est légèrement différent. Contrairement aux éditions communautaires et professionnelles, 
+                  Burp Enterprise est utilisé pour l'analyse continue. Il fournit un scanner automatisé qui peut analyser 
+                  périodiquement les applications Web à la recherche de vulnérabilités de la même manière qu'un logiciel 
+                  comme Nessus effectue une analyse automatisée de l'infrastructure. Contrairement aux autres éditions de Burp Suite qui vous permettent d'effectuer des attaques manuelles à partir de votre propre ordinateur, 
+                  Enterprise se trouve sur un serveur et analyse en permanence les applications Web cibles à la recherche de vulnérabilités.
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+{% endblock content %}

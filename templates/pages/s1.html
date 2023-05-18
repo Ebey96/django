@@ -1,0 +1,44 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block content %}
+<div style="margin-left: 20%; margin-top: 1%;">
+    <div class="">
+      <div class="card p-5 w-75 h-100">
+          <div class="card-body">
+            <h4 class="font-weight-bold">Scénario 1</h4>
+            <p class="card-text">c'est un défi  dans lequel notre objectif est d'obtenir un accès root pour relever le défi</p>
+            <p><h5 class="font-weight-bold">Security Level</h5>Beginner</p>
+            <p class="font-weight-bold"><h5 class="font-weight-bold">Méthodologie</h5></p>
+            <p>
+              <h6  class="font-weight-bold">Scann</h6>
+              <ul style="margin-left: 5%;">
+                <li>Découverte des cibles IP</li>
+                <li>Scan du réseau (Nmap)</li>
+              </ul>
+            </p>
+            <p>
+              <h6  class="font-weight-bold">Exploitation</h6>
+              <ul style="margin-left: 5%;">
+                <li>Surfer sur le port du service HTTP</li>
+                <li>Identifiant de connexion HTTP Bruteforce (Burpsuite)</li>
+                <li>Injection de commandes</li>
+                <li>Identifiants de connexion SSH Bruteforce (Hydra)</li>
+              </ul>
+            </p>
+            <p>
+              <h6  class="font-weight-bold">Privilege Escalation</h6>
+              <ul style="margin-left: 5%;">
+                <li>Vérifier les droits Sudo</li>
+                <li>Ajout d'un nouvel utilisateur /etc/passwd avec sudo</li>
+                <li>Accéder au répertoire racine</li>
+                <li>Capture the flag</li>
+              </ul>
+            </p>
+            <a href="{% url 'h2' %}" class="btn btn-primary">Start</a>
+            <a href="#" class="btn btn-secondary">Solution</a>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
